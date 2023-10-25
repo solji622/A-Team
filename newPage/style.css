@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.page1 {
+    font-family: 'Archivo Black', sans-serif;
+    background-color: #c8b6a6;
+}
+
+.page2 {
+    background-color: #705A50;
+}
+
+.page3 {
+    background-color: #553939;
+}
