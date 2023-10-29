@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+  height: 3000px;
+  overflow: scroll;
+}
+
+.quotes1{
+    background-color: #c8b6a6;
+    text-align: center;
+    height: 1000px;
+    padding-top: 300px;
+}
+.quotes1 p{
+    font-family: "Pretendard-Regular";
+    font-weight: 700;
+    font-size: 60px;
+    color:#553939;
+}
+.quotes1 h2{
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 100px;
+    color: #553939;
+}
+.people1 p{
+    font-size: 40px;
+    opacity: 0.5;
+}
+
+.quotes2{
+    background-color: #705A50;
+    text-align: center;
+    height: 1000px;
+    padding-top: 300px;
+}
+.quotes2 p{
+    font-family: "Pretendard-Regular";
+    font-weight: 700;
+    font-size: 60px;
+    color:#c8b6a6;
+}
+.quotes2 h2{
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 100px;
+    color: #c8b6a6;
+}
+.people2 p{
+    font-size: 40px;
+    opacity: 0.5;
+}
+
+.quotes3{
+    background-color: #553939;
+    text-align: center;
+    height: 1000px;
+    padding-top: 300px;
+}
+.quotes3 p{
+    font-family: "Pretendard-Regular";
+    font-weight: 700;
+    font-size: 60px;
+    color:#c8b6a6;
+}
+.quotes3 h2{
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 100px;
+    color: #c8b6a6;
+}
+.people3 p{
+    font-size: 40px;
+    opacity: 0.5;
+}
