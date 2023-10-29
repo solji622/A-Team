@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-style: normal;
+}
+@font-face {
+  font-family: "intelone-mono-font-family-regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/intelone-mono-font-family-regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #c8b6a6;
+    /* background-image: 'https://i.pinimg.com/564x/c3/be/c3/c3bec35ffdbb4158a4e8b78abb891e19.jpg';
+    background-size: cover;
+    width: 100%; */
+  }
+  .header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 50px;
+    background: #705A50;
+  }
+  .header > ul {
+    list-style: none;  
+    margin: 0;
+    padding-left: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 30px;
+  }
+  .header li{
+    font-family: 'Pretendard-Regular';
+    font-weight: 400;
+    font-size: 20px;
+  }
+  .header li:hover{
+    background-color: #553939;
+    color: white;
+    text-align: center;
+  }
+  
+  .main h2{
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 100px;
+    text-align: center;
+    color: #553939;
+  }
+  .main p{
+    font-family: 'Pretendard-Regular';
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    color:#705A50;
+  }
+
+  .page1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  main .arrow_div{
+    position: absolute;
+    left: calc(50% - 11px);
+    top: calc(100vh - 60px);
+    height: 22px;
+  }
+  main .arrow_div .arrow{
+    position: absolute;
+    opacity: 1;
+  }
+  main .arrow_div .arrow:first-child{
+    animation: motion 2s ease-out 0s infinite;
+  }
+  main .arrow_div .arrow:last-child{
+    animation: motion 2s ease-out 1s infinite;
+    opacity: 0;
+  }
+  
+  @keyframes motion{
+    25%{
+      opacity: 1;
+    }
+    50%{
+      opacity: 1;
+      transform: translateY(15px);
+    }
+    100%{
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  }
+
+  .main > section {
+    min-height: 100vh;
+    padding-top: 70px;
+  }
+  
+  .footer {
+    background: #CCC;
+    overflow: hidden;
+  }
