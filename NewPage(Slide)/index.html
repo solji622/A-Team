@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="./style.css">
+    <script>
+        window.addEventListener("load", function() {
+  let elNavi = document.querySelector(".header > ul");
+  let aElSection = document.querySelectorAll(".main > section");
+  let curSIdx = 0;
+  
+  Array.from(elNavi.children, function(elMenu, idx, elMenus) {
+  	elMenu.addEventListener("click", function() {
+    	doScroll(idx);
+    });
+  });
+  
+  let wheelTimer;
+  window.addEventListener("wheel", function(e) {
+  	clearTimeout(wheelTimer);
+    wheelTimer = setTimeout(function() {
+    	if(e.deltaY < 0) 	doScroll(++curSIdx);
+      else doScroll(--curSIdx);
+    }, 50);
+  });
+  
+  function doScroll(sidx) {
+  	sidx = sidx < 0 ? 0 : sidx;
+    sidx = sidx > aElSection.length - 1 ? aElSection.length - 1 : sidx;
+    
+    curSIdx = sidx;
+    
+    aElSection[curSIdx].scrollIntoView({
+      block: "start", inline: "start", behavior: "smooth"
+    });  	
+  }
+});
+    </script>
+</head>
+<body>
+    <header class="header">
+        <ul>
+          <li>MAIN</li>
+          <li>QUOTES 1</li>
+          <li>QUOTES 2</li>
+        </ul>
+      </header>
+      
+      <main class="main">
+        <section>
+          <div class="page1">
+            <h2>Life Quotes</h2>
+            <p>A-Team Project</p>
+          </div>
+          <div class="arrow_div">
+            <div class="arrow">
+              <img src="https://i.ibb.co/BTbSmBS/1.png" alt="">
+            </div>
+            <div class="arrow">
+              <img src="https://i.ibb.co/BTbSmBS/1.png" alt="">
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Don't give up</h2>
+          <p>도중에 포기하지 말라. 망설이지 말라. 최후의 성공을 거둘 때까지 밀고 나가자. -헨리포드</p>
+        </section>
+        <section>
+          <h2>Don't lose your dream</h2>
+          <p>평생 살 것처럼 꿈을 꾸어라. 그리고 내일 죽을 것처럼 오늘을 살아라. –제임스 딘</p>
+        </section>
+      </main>
+      
+      <footer class="footer">
+        <p>A-Team</p>
+        <p>copyrightⓒ SSS Web Study.</p>
+      </footer>
+</body>
+</html>
